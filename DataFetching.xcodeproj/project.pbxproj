@@ -16,6 +16,12 @@
 		F6D950332BE38A2C0024CE46 /* DataFetchingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D950322BE38A2C0024CE46 /* DataFetchingTests.swift */; };
 		F6D9503D2BE38A2C0024CE46 /* DataFetchingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D9503C2BE38A2C0024CE46 /* DataFetchingUITests.swift */; };
 		F6D9503F2BE38A2C0024CE46 /* DataFetchingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D9503E2BE38A2C0024CE46 /* DataFetchingUITestsLaunchTests.swift */; };
+		F6D950502BE38AC50024CE46 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D9504F2BE38AC50024CE46 /* PostViewModel.swift */; };
+		F6D950522BE38AD70024CE46 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D950512BE38AD70024CE46 /* Post.swift */; };
+		F6D950552BE395250024CE46 /* PostsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D950542BE395250024CE46 /* PostsTableViewCell.swift */; };
+		F6D950572BE3AD080024CE46 /* PostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D950562BE3AD080024CE46 /* PostDetailViewController.swift */; };
+		F6D950592BE3B0750024CE46 /* PostDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D950582BE3B0750024CE46 /* PostDetailViewModel.swift */; };
+		F6D9505C2BE3BAA80024CE46 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D9505B2BE3BAA80024CE46 /* CacheManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,12 @@
 		F6D950382BE38A2C0024CE46 /* DataFetchingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataFetchingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6D9503C2BE38A2C0024CE46 /* DataFetchingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetchingUITests.swift; sourceTree = "<group>"; };
 		F6D9503E2BE38A2C0024CE46 /* DataFetchingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetchingUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F6D9504F2BE38AC50024CE46 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
+		F6D950512BE38AD70024CE46 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		F6D950542BE395250024CE46 /* PostsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewCell.swift; sourceTree = "<group>"; };
+		F6D950562BE3AD080024CE46 /* PostDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewController.swift; sourceTree = "<group>"; };
+		F6D950582BE3B0750024CE46 /* PostDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewModel.swift; sourceTree = "<group>"; };
+		F6D9505B2BE3BAA80024CE46 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +111,9 @@
 		F6D9501A2BE38A170024CE46 /* DataFetching */ = {
 			isa = PBXGroup;
 			children = (
+				F6D9504B2BE38A810024CE46 /* Posts */,
 				F6D9501B2BE38A170024CE46 /* AppDelegate.swift */,
 				F6D9501D2BE38A170024CE46 /* SceneDelegate.swift */,
-				F6D9501F2BE38A170024CE46 /* ViewController.swift */,
 				F6D950212BE38A170024CE46 /* Main.storyboard */,
 				F6D950242BE38A2C0024CE46 /* Assets.xcassets */,
 				F6D950262BE38A2C0024CE46 /* LaunchScreen.storyboard */,
@@ -125,6 +137,60 @@
 				F6D9503E2BE38A2C0024CE46 /* DataFetchingUITestsLaunchTests.swift */,
 			);
 			path = DataFetchingUITests;
+			sourceTree = "<group>";
+		};
+		F6D9504B2BE38A810024CE46 /* Posts */ = {
+			isa = PBXGroup;
+			children = (
+				F6D950532BE395110024CE46 /* Cells */,
+				F6D9504E2BE38AA40024CE46 /* View */,
+				F6D9504D2BE38A940024CE46 /* ViewModel */,
+				F6D9504C2BE38A8E0024CE46 /* Model */,
+				F6D9505A2BE3BA690024CE46 /* Miscellaneous */,
+			);
+			path = Posts;
+			sourceTree = "<group>";
+		};
+		F6D9504C2BE38A8E0024CE46 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F6D950512BE38AD70024CE46 /* Post.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F6D9504D2BE38A940024CE46 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F6D9504F2BE38AC50024CE46 /* PostViewModel.swift */,
+				F6D950582BE3B0750024CE46 /* PostDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F6D9504E2BE38AA40024CE46 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F6D9501F2BE38A170024CE46 /* ViewController.swift */,
+				F6D950562BE3AD080024CE46 /* PostDetailViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F6D950532BE395110024CE46 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F6D950542BE395250024CE46 /* PostsTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		F6D9505A2BE3BA690024CE46 /* Miscellaneous */ = {
+			isa = PBXGroup;
+			children = (
+				F6D9505B2BE3BAA80024CE46 /* CacheManager.swift */,
+			);
+			path = Miscellaneous;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +324,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6D950502BE38AC50024CE46 /* PostViewModel.swift in Sources */,
+				F6D9505C2BE3BAA80024CE46 /* CacheManager.swift in Sources */,
+				F6D950592BE3B0750024CE46 /* PostDetailViewModel.swift in Sources */,
+				F6D950572BE3AD080024CE46 /* PostDetailViewController.swift in Sources */,
 				F6D950202BE38A170024CE46 /* ViewController.swift in Sources */,
 				F6D9501C2BE38A170024CE46 /* AppDelegate.swift in Sources */,
+				F6D950552BE395250024CE46 /* PostsTableViewCell.swift in Sources */,
 				F6D9501E2BE38A170024CE46 /* SceneDelegate.swift in Sources */,
+				F6D950522BE38AD70024CE46 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
