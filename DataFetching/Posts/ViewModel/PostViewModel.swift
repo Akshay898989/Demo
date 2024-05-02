@@ -29,8 +29,6 @@ class PostViewModel {
         URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
             guard let self = self, let data = data, error == nil else { return }
             do {
-                var backToString = String(data: data, encoding: String.Encoding.utf8) as String?
-                print(backToString)
                 let fetchedPosts = try JSONDecoder().decode([Post].self, from: data)
                 dump(fetchedPosts)
                 DispatchQueue.main.async{
