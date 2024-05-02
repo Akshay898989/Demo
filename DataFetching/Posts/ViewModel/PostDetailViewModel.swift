@@ -75,6 +75,22 @@ class PostDetailViewModel {
         
         return processedImage
     }
+    
+    func camelCase(from string: String) -> String {
+        var result = ""
+        let words = string.components(separatedBy: .whitespacesAndNewlines)
+        
+        for (index, word) in words.enumerated() {
+            let trimmedWord = word.trimmingCharacters(in: .whitespacesAndNewlines)
+            if index == 0 {
+                result += trimmedWord.lowercased()
+            } else {
+                result += trimmedWord.prefix(1).uppercased() + trimmedWord.dropFirst().lowercased()
+            }
+        }
+        
+        return result
+    }
 }
 
 

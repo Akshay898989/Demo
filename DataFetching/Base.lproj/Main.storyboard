@@ -76,7 +76,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6EN-40-zGH">
-                                <rect key="frame" x="27" y="169" width="336" height="336"/>
+                                <rect key="frame" x="27" y="149.66666666666663" width="336" height="342"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Body" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ogk-2A-jjS">
                                 <rect key="frame" x="27" y="541.66666666666663" width="336" height="20.333333333333371"/>
@@ -84,23 +84,33 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dK8-6x-Ap6">
+                                <rect key="frame" x="27" y="78" width="336" height="21.666666666666671"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XbB-78-jFt"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="XbB-78-jFt" firstAttribute="trailing" secondItem="dK8-6x-Ap6" secondAttribute="trailing" constant="27" id="Acp-Zi-Tgg"/>
                             <constraint firstItem="6EN-40-zGH" firstAttribute="leading" secondItem="XbB-78-jFt" secondAttribute="leading" constant="27" id="EdH-eL-J3z"/>
                             <constraint firstItem="XbB-78-jFt" firstAttribute="bottom" secondItem="Ogk-2A-jjS" secondAttribute="bottom" constant="248" id="F30-N8-rlX"/>
-                            <constraint firstItem="6EN-40-zGH" firstAttribute="top" secondItem="XbB-78-jFt" secondAttribute="top" constant="122" id="Sck-Ar-NKL"/>
+                            <constraint firstItem="dK8-6x-Ap6" firstAttribute="top" secondItem="XbB-78-jFt" secondAttribute="top" constant="31" id="Fg2-nf-jyu"/>
+                            <constraint firstItem="6EN-40-zGH" firstAttribute="top" secondItem="dK8-6x-Ap6" secondAttribute="bottom" constant="50" id="T8l-Mw-W0Z"/>
                             <constraint firstItem="XbB-78-jFt" firstAttribute="trailing" secondItem="6EN-40-zGH" secondAttribute="trailing" constant="27" id="UCg-yk-C7g"/>
                             <constraint firstItem="Ogk-2A-jjS" firstAttribute="leading" secondItem="XbB-78-jFt" secondAttribute="leading" constant="27" id="g3i-3R-ZcH"/>
                             <constraint firstItem="XbB-78-jFt" firstAttribute="trailing" secondItem="Ogk-2A-jjS" secondAttribute="trailing" constant="27" id="hQc-Ir-CkP"/>
-                            <constraint firstItem="Ogk-2A-jjS" firstAttribute="top" secondItem="6EN-40-zGH" secondAttribute="bottom" constant="36.666666666666629" id="hvK-6p-ZTN"/>
+                            <constraint firstItem="Ogk-2A-jjS" firstAttribute="top" secondItem="6EN-40-zGH" secondAttribute="bottom" constant="50" id="hvK-6p-ZTN"/>
+                            <constraint firstItem="dK8-6x-Ap6" firstAttribute="leading" secondItem="XbB-78-jFt" secondAttribute="leading" constant="27" id="m0U-wk-FsZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="j1R-lv-FmA"/>
                     <connections>
                         <outlet property="bodyLabel" destination="Ogk-2A-jjS" id="LFM-ny-kIk"/>
                         <outlet property="imageView" destination="6EN-40-zGH" id="bTi-Gn-1IC"/>
+                        <outlet property="titleLabel" destination="dK8-6x-Ap6" id="Vcl-Mo-1hj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G6f-f8-6JJ" sceneMemberID="firstResponder"/>

@@ -10,28 +10,22 @@ import UIKit
 class PostDetailViewController: UIViewController {
     var viewModel: PostDetailViewModel!
     var post: Post?
-    //private let imageView = UIImageView()
+    @IBOutlet weak var titleLabel: UILabel!
     
     @IBOutlet weak var imageView: UIImageView!
     
     @IBOutlet weak var bodyLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-      //  setupImageView()
+        guard let post = post else{return}
+        viewModel = PostDetailViewModel(post: post)
+        titleLabel.text = viewModel.camelCase(from: post.title)
         imageView.contentMode = .scaleAspectFill
-        bodyLabel.text = post?.body
+        bodyLabel.text = post.body
         fetchImage()
     }
     
-//    private func setupImageView() {
-//        imageView.frame = view.bounds  // Example setup, adjust as needed
-//        imageView.contentMode = .scaleAspectFit
-//        view.addSubview(imageView)
-//    }
-//
     private func fetchImage() {
-        guard let post = post else{return}
-        viewModel = PostDetailViewModel(post: post)
         viewModel.fetchImageIfNeeded{ [weak self] result in
             switch result {
             case .success(let image):
@@ -40,7 +34,6 @@ class PostDetailViewController: UIViewController {
                 }
             case .failure(let error):
                 print("Error fetching image: \(error.localizedDescription)")
-                // Optionally handle the error by showing an alert or a placeholder image
             }
         }
     }
